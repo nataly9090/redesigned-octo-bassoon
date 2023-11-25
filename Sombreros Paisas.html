@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sombreros Paisas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #FCD116, #0033A0, #CE1126);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .logo {
+            max-width: 100px; /* Ajusta el tamaño según sea necesario */
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .login-button {
+            float: right;
+            margin-top: -30px;
+            margin-right: 20px;
+            padding: 10px 20px;
+            background-color: #CE1126;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .login-button:hover {
+            background-color: #0033A0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .accordion {
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid #ddd;
+            outline: none;
+            font-size: 16px;
+            transition: 0.4s;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .accordion:hover {
+            background-color: #ddd;
+        }
+
+        .accordion.active {
+            background-color: #ddd;
+        }
+
+        .panel {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .panel.show {
+            max-height: 500px; /* Ajusta este valor según sea necesario */
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://images.vexels.com/media/users/3/223090/isolated/preview/674314950076a88f1519f666677fd46f-ilustraci-oacute-n-de-sombrero-tradicional-colombiano-by-vexels.png" alt="Sombrero Colombiano" class="logo">
+        <div>
+            <h1>Sombreros Paisas</h1>
+            <h2>Se Feliz Con Lo Que Eres</h2>
+        </div>
+        <button class="login-button" onclick="window.location.href='https://forms.gle/3Na4Di4bCukvTN3t5'">Iniciar Sesión</button>
+    </header>
+
+    <section id="descripcion-producto">
+        <button class="accordion">Descripción del Producto</button>
+        <div class="panel">
+            <p>
+                Todo tipo de sombreros colombianos desde los más anticuados hasta los más modernos hasta ahora.
+                También los hacemos personalizados y a todo tipo de edades. Manejamos envíos internacionales.
+            </p>
+            <p>Materiales: Fieltro (preferiblemente de lana), Papel para los patrones, Tijeras, Alfileres, Máquina de coser, Plancha, Cinta Métrica, Adornos.</p>
+        </div>
+    </section>
+
+    <section id="cargos">
+        <button class="accordion">Cargos y Funciones</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Diseñador de Sombreros:</strong> Responsable de la creación de los diseños de los sombreros.</li>
+                <li><strong>Fabricante de Sombreros:</strong> Encargado de producir los sombreros físicos según los diseños.</li>
+                <li><strong>Gerente General:</strong> Supervisa la producción y gestiona el flujo de trabajo.</li>
+                <li><strong>Publicista:</strong> Desarrolla estrategias de promoción y ventas.</li>
+                <li><strong>Cajero:</strong> Se encarga de la contabilidad y la gestión financiera.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="pagos">
+        <button class="accordion">Pagos</button>
+        <div class="panel">
+            <ul>
+                <li><strong>Diseñador de Sombreros:</strong> $1,700,000</li>
+                <li><strong>Cajero:</strong> $1,200,000</li>
+                <li><strong>Gerente General:</strong> $4,000,000</li>
+                <li><strong>Publicista:</strong> $3,700,000</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="proceso-producto">
+        <button class="accordion">Proceso del Producto</button>
+        <div class="panel">
+            <ul>
+                <li>Telas x6 = $1,320</li>
+                <li>Maniquíes x7 = $490</li>
+                <li>Pinturas x8 = $400</li>
+                <li>Espejos x5 = $400</li>
+                <li>Cajas x60 = $7,200</li>
+                <li>Bolsas x70 = $3,640</li>
+                <li>Tijeras x5 = $100</li>
+                <li>Algodón x12 = $97,883</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Contacto: +573135070573</p>
+        <p>Correo: sombreros@paisas.com</p>
+        <p>¿Dónde nos ubicamos?: Centro Comercial Viva Envigado, Local 126</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+
+                    // Oculta todas las secciones desplegables excepto la actual
+                    for (var j = 0; j < acc.length; j++) {
+                        if (acc[j] !== this) {
+                            acc[j].classList.remove("active");
+                            acc[j].nextElementSibling.style.maxHeight = null;
+                        }
+                    }
+
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                        panel.classList.remove('show');
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                        panel.classList.add('show');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
